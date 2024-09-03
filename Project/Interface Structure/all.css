@@ -188,6 +188,7 @@ body {
                 margin-bottom: 42px;
                 border-top: 2px solid var(--button-color);
                 padding: 32px 0;
+                border-bottom: 2px solid var(--button-color);
             }
 
             .close-button {
@@ -352,7 +353,7 @@ body {
             .buttons-modal {
                 display: flex;
                 flex-direction: column;
-                gap: 10px;
+                gap: px;
                 margin-top: auto;
 
                 .check-out, .con-shopping {

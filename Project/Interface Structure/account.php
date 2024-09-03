@@ -12,12 +12,12 @@
 <?php include 'nav.php' ?>
 <div class="containerism">
     <div class="account">
-        <div class="tabs">
-            <div class="active" data-tab="tab-content" onclick="showTab('tab-account')">Account</div>
-            <div data-tab="tab-registered-products" onclick="showTab('tab-registered-products')">Sell Product</div>
-            <div data-tab="tab-orders" onclick="showTab('tab-orders')">Products</div>
-            <div data-tab="tab-sound-packs" onclick="showTab('tab-sound-packs')">History</div>
-        </div>
+    <div class="tabs">
+    <div data-tab="tab-account" onclick="showTab('tab-account')" class="active">Account</div>
+    <div data-tab="tab-registered-products" onclick="showTab('tab-registered-products')">Sell Product</div>
+    <div data-tab="tab-orders" onclick="showTab('tab-orders')">Products</div>
+    <div data-tab="tab-sound-packs" onclick="showTab('tab-sound-packs')">History</div>
+    </div>
         <div class="tab-content" id="tab-content">
             <div id="tab-account" class="tab active">
                 <form action="save_account.php" method="POST">
@@ -112,60 +112,59 @@
 
 
                 <form action="save_account.php" method="POST" id="billing-address-form">
-                    <div class="input-field">
-                        <h4>Billing Address</h4>
-                        <!-- Checkbox here -->
-                        <div class="form-row">
-                            <input type="checkbox" id="same_as_shipping" name="same_as_shipping" onchange="toggleBillingAddress()">
-                            <p>Same as Shipping Address</p>
-                        </div>
-                        <h>Full Name</h>
-                        <div class="form-row">
-                            <div>
-                                <input type="text" id="billing_first_name" name="billing_first_name" required placeholder="First Name">
-                            </div>
-                            <div>
-                                <input type="text" id="billing_last_name" name="billing_last_name" required placeholder="Last Name">
-                            </div>
-                        </div>
+            <div class="input-field">
+                <h4>Billing Address</h4>
+                <!-- Checkbox here -->
+                <div class="form-row">
+                    <input type="checkbox" id="same_as_shipping" name="same_as_shipping" onchange="toggleBillingAddress()">
+                    <p>Same as Shipping Address</p>
+                </div>
+                <h>Full Name</h>
+                <div class="form-row">
+                    <div>
+                        <input type="text" id="billing_first_name" name="billing_first_name" required placeholder="First Name">
                     </div>
-                    <div class="input-field">
-                        <h>Contact Information</h>
-                        <div class="form-row">
-                            <div>
-                                <input type="text" id="billing_phone_number" name="billing_phone_number" required placeholder="Phone Number">
-                            </div>
-                            <div>
-                                <input type="email" id="billing_email" name="billing_email" required placeholder="Email">
-                            </div>
-                        </div>
+                    <div>
+                        <input type="text" id="billing_last_name" name="billing_last_name" required placeholder="Last Name">
                     </div>
+                </div>
+            </div>
+            <div class="input-field">
+                <h>Contact Information</h>
+                <div class="form-row">
+                    <div>
+                        <input type="text" id="billing_phone_number" name="billing_phone_number" required placeholder="Phone Number">
+                    </div>
+                    <div>
+                        <input type="email" id="billing_email" name="billing_email" required placeholder="Email">
+                    </div>
+                </div>
+            </div>
 
-                    <div class="input-field">
-                        <h>Address</h>
-                        <div class="widefield">
-                            <input type="text" id="billing_address" name="billing_address" required placeholder="Address">
-                        </div>
-                        <div class="form-row">
-                            <div>
-                                <input type="text" id="billing_postal_code" name="billing_postal_code" required placeholder="Postal Code">
-                            </div>
-                            <div>
-                                <input type="text" id="billing_city" name="billing_city" required placeholder="City">
-                            </div>
-                        </div>
-                        <div class="form-row">
-                            <div>
-                                <input type="text" id="billing_province" name="billing_province" required placeholder="Province">
-                            </div>
-                            <div>
-                                <input type="text" id="billing_country" name="billing_country" required placeholder="Country">
-                            </div>
-                        </div>
+            <div class="input-field">
+                <h>Address</h>
+                <div class="widefield">
+                    <input type="text" id="billing_address" name="billing_address" required placeholder="Address">
+                </div>
+                <div class="form-row">
+                    <div>
+                        <input type="text" id="billing_postal_code" name="billing_postal_code" required placeholder="Postal Code">
                     </div>
-                    <button type="submit">Save</button>
-                </form>
-
+                    <div>
+                        <input type="text" id="billing_city" name="billing_city" required placeholder="City">
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div>
+                        <input type="text" id="billing_province" name="billing_province" required placeholder="Province">
+                    </div>
+                    <div>
+                        <input type="text" id="billing_country" name="billing_country" required placeholder="Country">
+                    </div>
+                </div>
+            </div>
+            <button type="submit">Save</button>
+        </form>
                 <form>
                     <div class="input-field">
                         <h4>Privacy Settings</h4>
@@ -449,33 +448,49 @@
 </script>
 
 <script>
-    function showTab(tabId) {
-        const tabs = document.querySelectorAll('.tab');
-        const tabButtons = document.querySelectorAll('.tabs div');
-        tabs.forEach(tab => {
-            tab.classList.remove('active');
-        });
-        tabButtons.forEach(button => {
-            button.classList.remove('active');
-        });
-        document.getElementById(tabId).classList.add('active');
-        document.querySelector(`.tabs div[data-tab=${tabId}]`).classList.add('active');
-    }
+        function showTab(tabId) {
+            const tabs = document.querySelectorAll('.tab');
+            const tabButtons = document.querySelectorAll('.tabs div');
+            
+            tabs.forEach(tab => {
+                tab.classList.remove('active');
+            });
+            tabButtons.forEach(button => {
+                button.classList.remove('active');
+            });
 
-    function toggleBillingAddress() {
-        const billingForm = document.getElementById('billing-address-form');
-        const isChecked = document.getElementById('same_as_shipping').checked;
-        
-        if (isChecked) {
-            billingForm.classList.add('disabled');
-            billingForm.querySelectorAll('input').forEach(input => {
-                input.disabled = true;
-            });
-        } else {
-            billingForm.classList.remove('disabled');
-            billingForm.querySelectorAll('input').forEach(input => {
-                input.disabled = false;
-            });
+            document.getElementById(tabId).classList.add('active');
+            document.querySelector(`.tabs div[data-tab=${tabId}]`).classList.add('active');
         }
+
+        // Ensure Account tab is active on page load
+        window.onload = function() {
+            showTab('tab-account');
+        };
+
+
+
+
+
+
+        function toggleBillingAddress() {
+    const billingForm = document.getElementById('billing-address-form');
+    const isChecked = document.getElementById('same_as_shipping').checked;
+
+    if (isChecked) {
+        billingForm.classList.add('disabled');
+        billingForm.querySelectorAll('input').forEach(input => {
+            if (input.id !== 'same_as_shipping') { // Exclude the checkbox from being disabled
+                input.disabled = true;
+            }
+        });
+        billingForm.querySelector('button[type="submit"]').disabled = true; // Disable the submit button
+    } else {
+        billingForm.classList.remove('disabled');
+        billingForm.querySelectorAll('input').forEach(input => {
+            input.disabled = false;
+        });
+        billingForm.querySelector('button[type="submit"]').disabled = false; // Enable the submit button
     }
+}
 </script>
