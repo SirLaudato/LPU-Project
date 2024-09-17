@@ -177,10 +177,6 @@
         content: "+";
     }
 
-    .number-left:hover::before,
-    .number-right:hover::after {
-        background-color: #666666;
-    }
 
     .number-quantity {
         padding: 0.4rem;

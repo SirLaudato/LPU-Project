@@ -466,3 +466,25 @@ body {
   .close-modal-btn:hover {
     color: #000;
   }
+
+
+
+
+
+  #login {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 917px;
+        height: 100%;
+        background-color: var(--background-color);
+        color: var(--text-color);
+        box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
+        transition: right 0.4s ease-in-out;
+        z-index: 1000;
+
+        &.open {
+            right: 0;
+        }
+
+  }

@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Product</title>
     <link rel="stylesheet" href="product.css">
+    <link rel="stylesheet" href="comment.css">
     <link rel="stylesheet" href="all.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -49,7 +50,7 @@
                     <p>Stocks: 1</p>
 
                     <div class="product-features">
-                        <div class="key-features">Key Features</div>
+                        <div class="key-features">Product Description</div>
                         <div class="features-details">
                         <ul>
                         <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
@@ -69,7 +70,7 @@
 
 
 <div class="specifications">
-    <div class="specifications-title">Specifications</div>
+    <div class="specifications-title">Comments</div>
     <div class="spec-features">
 
 
@@ -144,91 +145,8 @@
 </div>
 </div>
 
-<div id="cart-modal" class="cart-modal">
-    <div class="cart-modal-content">
-        <span class="close-button">&times;</span>
-        <h2>Cart</h2>
-        <hr>
-        <div class="cart-items">
-            <!-- Product 1 -->
-            <div class="cart-item">
-                <div class="cart-item-image"></div>
-                <div class="cart-item-details">
-                    <div class="cart-item-name">Product 1</div>
-                    <div class="number-control">
-                        <div class="number-left"></div>
-                        <input type="number" name="number" class="number-quantity">
-                        <div class="number-right"></div>
-                    </div>
-                </div>
-                <div class="cart-pay">
-                    <span class="remove-product">&times;</span>
-                    <div class="cart-item-price">540.00</div>
-                    <div class="cart-item-currency">PHP</div>
-                </div>
-            </div>
 
-            <!-- Product 2 -->
-            <div class="cart-item">
-                <div class="cart-item-image"></div>
-                <div class="cart-item-details">
-                    <div class="cart-item-name">Product 2</div>
-                    <div class="number-control">
-                        <div class="number-left"></div>
-                        <input type="number" name="number" class="number-quantity">
-                        <div class="number-right"></div>
-                    </div>
-                </div>
-                <div class="cart-pay">
-                    <span class="remove-product">&times;</span>
-                    <div class="cart-item-price">110.00</div>
-                    <div class="cart-item-currency">PHP</div>
-                </div>
-            </div>
 
-            <!-- Product 3 -->
-            <div class="cart-item">
-                <div class="cart-item-image"></div>
-                <div class="cart-item-details">
-                    <div class="cart-item-name">Product 3</div>
-                    <div class="number-control">
-                        <div class="number-left"></div>
-                        <input type="number" name="number" class="number-quantity">
-                        <div class="number-right"></div>
-                    </div>
-                </div>
-                <div class="cart-pay">
-                    <span class="remove-product">&times;</span>
-                    <div class="cart-item-price">320.00</div>
-                    <div class="cart-item-currency">PHP</div>
-                </div>
-            </div>
-        </div>
-
-        <div class="payment-info">
-            <div class="subtotal">
-                <span>Subtotal</span>
-                <span class="amount">100.00</span>
-            </div>
-            <div class="discount">
-                <span>Discount</span>
-                <span class="amount">100.00</span>
-            </div>
-            <div class="shipping">
-                <span>Shipping</span>
-                <span class="amount">100.00</span>
-            </div>
-            <div class="total">
-                <span>Total</span>
-                <span class="amount">100.00</span>
-            </div>
-        </div>
-        <div class="buttons-modal">
-            <button class="check-out">Check out</button>
-            <button class="con-shopping">Continue Shopping</button>
-        </div>
-    </div>
-</div>
 <?php 
     include 'footer.php';
  ?>

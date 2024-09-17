@@ -231,7 +231,7 @@
                                         <input type="text" id="billing_first_name" name="billing_first_name" required placeholder="Product Title">
                                     </div>
                                     <div>
-                                        <input type="text" id="billing_last_name" name="billing_last_name" required placeholder="Product Brand">
+                                        <input type="text" id="billing_last_name" name="billing_last_name" required placeholder="Product Price ₱">
                                     </div>
                                 </div>
                             </div>
@@ -273,7 +273,7 @@
 
                                                         
                             <label for="file" class="file-upload-label">
-                            <h>Note: Maximum of 3 images are permitted.</h>
+                            <h>Note: Maximum of 2 images are permitted.</h>
                                 <div class="file-upload-design">
                                 <span class="con-shopping">Upload Image</span>
                                 </div>
@@ -294,6 +294,18 @@
                     <h2>Orders</h2>
                     <p>Your orders will be displayed here.</p>
                     <!-- Add more content as needed -->
+
+                    <div id="active-products">
+                        <div id="active-product-picture">
+                            
+
+                        </div>
+                        <div id="remove-product">
+
+                        </div>
+
+
+                    </div>
                 </div>
 
         </div>
